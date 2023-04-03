@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./index.js" defer></script>
+    <title>Tagged Notes</title>
+  </head>
+  <body class="body">
+    <section class="notes">
+      <div class="notes__header">
+        <h1 class="notes__title">Notes</h1>
+        <button class="notes__add-button scale-down"></button>
+      </div>
+      <div class="notes__container">
+        <article class="note">
+          <div class="note__header">
+            <input
+              type="text"
+              class="note__title"
+              placeholder="Make a title"
+              disabled
+            />
+            <div class="note__button-container">
+              <button
+                class="note__button note__button_type_reset scale-down note__button_disabled"
+              ></button
+              ><button
+                class="note__button note__button_type_edit scale-down"
+              ></button>
+              <button
+                class="note__button note__button_type_submit scale-down note__button_disabled"
+                type="submit"
+              ></button>
+            </div>
+          </div>
+          <div class="note__text-container">
+            <textarea
+              class="note__text"
+              disabled
+              placeholder="Jot something down"
+            ></textarea>
+          </div>
+          <div class="note__footer">
+            <button class="note__tag scale-down">Idea</button>
+            <button
+              class="note__button note__button_type_delete scale-down"
+            ></button>
+          </div>
+        </article>
+      </div>
+    </section>
+    <template id="NoteTemplate">
+      <article class="note">
+        <div class="note__header">
+          <input
+            type="text"
+            class="note__title"
+            placeholder="Make a title"
+            disabled
+          />
+          <div class="note__button-container">
+            <button
+              class="note__button note__button_type_reset scale-down note__button_disabled"
+            ></button
+            ><button
+              class="note__button note__button_type_edit scale-down"
+            ></button>
+            <button
+              class="note__button note__button_type_submit scale-down note__button_disabled"
+              type="submit"
+            ></button>
+          </div>
+        </div>
+        <div class="note__text-container">
+          <textarea
+            class="note__text"
+            disabled
+            placeholder="Jot something down"
+          ></textarea>
+        </div>
+        <div class="note__footer">
+          <button class="note__tag scale-down">Idea</button>
+          <button
+            class="note__button note__button_type_delete scale-down"
+          ></button>
+        </div></article
+    ></template>
+  </body>
+</html>
