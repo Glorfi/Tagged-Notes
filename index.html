@@ -19,10 +19,13 @@
     <section class="notes">
       <div class="notes__header">
         <h1 class="notes__title">Notes</h1>
-        <button class="notes__add-button scale-down"></button>
+        <button type="button" class="notes__add-button scale-down"></button>
       </div>
-      <div class="notes__container">
-        <article class="note">
+      <div class="notes__container"></div>
+    </section>
+    <template id="NoteTemplate">
+      <article class="note">
+        <form action="">
           <div class="note__header">
             <input
               type="text"
@@ -39,7 +42,6 @@
               ></button>
               <button
                 class="note__button note__button_type_submit scale-down note__button_disabled"
-                type="submit"
               ></button>
             </div>
           </div>
@@ -51,49 +53,34 @@
             ></textarea>
           </div>
           <div class="note__footer">
-            <button class="note__tag scale-down">Idea</button>
-            <button
+            <form action="" name="tag" class="note__tag-container">
+              <button type="button"
+                class="note__button note__button_type_add-tag scale-down"
+              ></button>
+              <button type="button"
+                class="note__button note__button_type_reset-tag scale-down note__button_disabled"
+              ></button>
+              
+                <input
+                  type="text"
+                  class="note__tag-input note__button_disabled"
+                  maxlength="10"
+                />
+                <button
+                  type="submit"
+                  class="note__button note__button_type_save-tag scale-down note__button_disabled"
+                ></button>
+              <button type="button"
+                class="note__button scale-down note__button_type_tag note__button_disabled"
+              >
+                Idea
+              </button>
+            </form>
+            <button type="button"
               class="note__button note__button_type_delete scale-down"
             ></button>
           </div>
-        </article>
-      </div>
-    </section>
-    <template id="NoteTemplate">
-      <article class="note">
-        <div class="note__header">
-          <input
-            type="text"
-            class="note__title"
-            placeholder="Make a title"
-            disabled
-          />
-          <div class="note__button-container">
-            <button
-              class="note__button note__button_type_reset scale-down note__button_disabled"
-            ></button
-            ><button
-              class="note__button note__button_type_edit scale-down"
-            ></button>
-            <button
-              class="note__button note__button_type_submit scale-down note__button_disabled"
-              type="submit"
-            ></button>
-          </div>
-        </div>
-        <div class="note__text-container">
-          <textarea
-            class="note__text"
-            disabled
-            placeholder="Jot something down"
-          ></textarea>
-        </div>
-        <div class="note__footer">
-          <button class="note__tag scale-down">Idea</button>
-          <button
-            class="note__button note__button_type_delete scale-down"
-          ></button>
-        </div></article
+        </form></article
     ></template>
   </body>
 </html>
