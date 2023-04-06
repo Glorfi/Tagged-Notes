@@ -53,30 +53,38 @@
             ></textarea>
           </div>
           <div class="note__footer">
-            <form action="" name="tag" class="note__tag-container">
-              <button type="button"
+            <form name="tag" class="note__tag-container">
+              <button
+                type="button"
                 class="note__button note__button_type_add-tag scale-down"
               ></button>
-              <button type="button"
+              <button
+                type="button"
                 class="note__button note__button_type_reset-tag scale-down note__button_disabled"
               ></button>
-              
-                <input
-                  type="text"
-                  class="note__tag-input note__button_disabled"
-                  maxlength="10"
-                />
-                <button
-                  type="submit"
-                  class="note__button note__button_type_save-tag scale-down note__button_disabled"
-                ></button>
-              <button type="button"
+
+              <input
+                type="text"
+                class="note__tag-input note__button_disabled"
+                minlength="1"
+                maxlength="10"
+                required
+              />
+              <button
+                type="submit"
+                class="note__button note__button_type_save-tag scale-down note__button_disabled"
+                disabled
+              ></button>
+
+              <button
+                type="button"
                 class="note__button scale-down note__button_type_tag note__button_disabled"
               >
                 Idea
               </button>
             </form>
-            <button type="button"
+            <button
+              type="button"
               class="note__button note__button_type_delete scale-down"
             ></button>
           </div>

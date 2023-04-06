@@ -76,6 +76,9 @@ class Note {
       this._disableButton(this._resetTagButton);
       this._disableButton(this._tagInput);
       this._tagInput.value = "";
+    });
+    this._tagInput.addEventListener('input', () => { 
+      this._handleSaveTagButton();
     })
     this._saveTagButton.addEventListener("click", () => {
       this._disableButton(this._addTagButton);
@@ -85,8 +88,7 @@ class Note {
       this._disableButton(this._saveTagButton);
       this._disableButton(this._resetTagButton);
       this._disableButton(this._tagInput);
-      
-    })
+    });
     this._deleteButton.addEventListener("click", () => {
       this._element.remove();
     });
@@ -98,6 +100,14 @@ class Note {
       });
     });
   }
+  _handleSaveTagButton() {
+    if ((this._tagInput.value === "")) {
+      this._saveTagButton.disabled = true;
+    } else {
+      this._saveTagButton.disabled = false;
+    }
+  }
+
   _enableTextFields() {
     this._noteTitle.disabled = false;
     this._noteText.disabled = false;
